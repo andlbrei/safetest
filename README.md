@@ -130,7 +130,7 @@ To get started with Safetest, follow these steps:
    ```json
    {
      "scripts": {
-       "safetest": "OPT_URL=${OPT_URL:-http://localhost:3000/} vitest --config vite.safetest.config",
+       "safetest": "OPT_URL=${OPT_URL:-http://localhost:3000/} vitest --config vitest.safetest.config.ts",
        "safetest:ci": "rm -f artifacts.json && OPT_URL=${DEPLOYED_URL} OPT_CI=1 OPT_DOCKER=1 OPT_ARTIFACTS=artifacts.json npm run safetest -- --run --bail=5",
        "safetest:regenerate-screenshots": "OPT_DOCKER=1 npm run safetest -- --run --update"
      }
